@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>2×2 MJPEG Stream Grid</title>
+  <style>
+    html, body {
+      margin: 0;
+      height: 100%;
+      width: 100%;
+      background-color: orange;
+    }
+    .grid {
+      display: grid;
+      gap: 0.25rem;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      height: 100%;
+      width: 100%;
+    }
+    .grid img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid">
+    <img src="http://localhost:1181/stream.mjpg" alt="Stream 1" />
+    <img src="http://localhost:1183/stream.mjpg" alt="Stream 2" />
+    <img src="http://localhost:1185/stream.mjpg" alt="Stream 3" />
+    <img src="http://localhost:1187/stream.mjpg" alt="Stream 4" />
+  </div>
+</body>
+</html>
